@@ -51,21 +51,35 @@
 
 
 //6. Get and Print Average    Analyze an array’s values and print the average.
-function printAverageOfArray(arr){
-   let average=0
-   let sum=0
-  let index=0
-  while(index<arr.length){
-    sum+=arr[index]
-    index++;
+// function printAverageOfArray(arr){
+//    let average=0
+//    let sum=0
+//   let index=0
+//   while(index<arr.length){
+//     sum+=arr[index]
+//     index++;
+//   }
+
+//   // arr.forEach(element => {
+//   //   sum+=element
+//   // });
+//   average=sum/arr.length
+//   console.log("ave is: ",average)
+// }
+//  const arr=[2,4,8,43]
+//  printAverageOfArray(arr)
+
+// 7. Array with Odds  Create an array with all the odd integers between 1 and 255 (inclusive).
+function returnOddsArray1To255(){
+  let newArr=[]
+  for(let i=1;i<=255;i++){
+  if(i%2!==0){
+    newArr.push(i)
   }
-
-  // arr.forEach(element => {
-  //   sum+=element
-  // });
-  average=sum/arr.length
-  console.log("ave is: ",average)
+  console.log("array: ",newArr)
+ 
+  }
+  return newArr
 }
- const arr=[2,4,8,43]
- printAverageOfArray(arr)
-
+returnOddsArray1To255()
+  
