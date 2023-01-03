@@ -16,11 +16,21 @@
 // printOdds1To255()
 
 // 3. Print Ints and Sum 0-255   Print integers from 0 to 255, and with each integer print the sum so far. 
-function printIntsAndSum0To255(){
-  let sum=0
-  for(let num=0;num<=255;num++){
-    console.log("number is: ",num,"sum up to here is: ",sum+=num)
+// function printIntsAndSum0To255(){
+//   let sum=0
+//   for(let num=0;num<=255;num++){
+//     console.log("number is: ",num,"sum up to here is: ",sum+=num)
 
-  }
+//   }
+// }
+// printIntsAndSum0To255()
+
+
+// 4. Iterate and Print Array   Iterate through a given array, printing each value. 
+function printArrayVals(arr){
+for(let element of arr){
+  console.log(element)
 }
-printIntsAndSum0To255()
+}
+const arr=[1,34,"hello"]
+printArrayVals(arr)
