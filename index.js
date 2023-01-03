@@ -37,14 +37,35 @@
 
 
 //5. Find and Print Max      Given an array, find and print its largest element. 
-function printMaxOfArray(arr){
-  let largest=0
-  for(let element of arr){
-    if(element>largest){
-      largest=element
-    }
-    console.log("largest is: ",largest)
+// function printMaxOfArray(arr){
+//   let largest=0
+//   for(let element of arr){
+//     if(element>largest){
+//       largest=element
+//     }
+//     console.log("largest is: ",largest)
+//   }
+// }
+// const arr=[2,33,1,42,90,45]
+// printMaxOfArray(arr)
+
+
+//6. Get and Print Average    Analyze an array’s values and print the average.
+function printAverageOfArray(arr){
+   let average=0
+   let sum=0
+  let index=0
+  while(index<arr.length){
+    sum+=arr[index]
+    index++;
   }
+
+  // arr.forEach(element => {
+  //   sum+=element
+  // });
+  average=sum/arr.length
+  console.log("ave is: ",average)
 }
-const arr=[2,33,1,42,90,45]
-printMaxOfArray(arr)
+ const arr=[2,4,8,43]
+ printAverageOfArray(arr)
+
