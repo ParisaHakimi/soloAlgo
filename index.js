@@ -70,16 +70,16 @@
 //  printAverageOfArray(arr)
 
 // 7. Array with Odds  Create an array with all the odd integers between 1 and 255 (inclusive).
-function returnOddsArray1To255(){
-  let newArr=[]
-  for(let i=1;i<=255;i++){
-  if(i%2!==0){
-    newArr.push(i)
-  }
-  console.log("array: ",newArr)
+// function returnOddsArray1To255(){
+//   let newArr=[]
+//   for(let i=1;i<=255;i++){
+//   if(i%2!==0){
+//     newArr.push(i)
+//   }
+//   console.log("array: ",newArr)
  
-  }
-  return newArr
-}
-returnOddsArray1To255()
+//   }
+//   return newArr
+// }
+// returnOddsArray1To255()
   
