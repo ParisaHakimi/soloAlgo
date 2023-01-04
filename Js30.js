@@ -101,12 +101,13 @@ const people = [
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
-const sPeople = people.sort((firstPerson, nextPerson) => {
-  const [nameFirstPerson, lastFirstPerson] = firstPerson.split(", ");
-  const [nameNextPerson, lastNextPerson] = nextPerson.split(", ");
-  return lastFirstPerson > lastNextPerson ? 1 : -1;
-});
-console.table(sPeople)
+// const sPeople = people.sort((firstPerson, nextPerson) => {
+//   const [nameFirstPerson, lastFirstPerson] = firstPerson.split(", ");
+//   const [nameNextPerson, lastNextPerson] = nextPerson.split(", ");
+//   return lastFirstPerson > lastNextPerson ? 1 : -1;
+// });
+// console.table(sPeople)
+
 // 8. Reduce Exercise
 // Sum up the instances of each of these
 const data = [
@@ -125,3 +126,12 @@ const data = [
   "car",
   "truck",
 ];
+  
+const trans=data.reduce((obj,item)=>{
+    if(!obj[item]){
+        obj[item]=0
+    }
+    obj[item]++;
+    return obj
+},{})
+console.log(trans)
