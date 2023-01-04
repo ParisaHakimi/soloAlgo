@@ -87,12 +87,17 @@ const people = [
 const sInventorAge=inventors.sort((a,b)=>{
 const firstGuy=a.passed-a.year
 const nextGuy=b.passed-b.year
-return firstGuy>nextGuy ? 1 :-1
+return firstGuy>nextGuy ? -1 :1
 })
 console.log(sInventorAge)
+
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-
+const category=document.querySelector('.mw-category')
+const links=Array.from(category.querySelectorAll('a'))
+const de=links
+        .map(link=>link.textContent)
+        .filter(link=>link.includes("de"))
 // 7. sort Exercise
 // Sort the people alphabetically by last name
 
