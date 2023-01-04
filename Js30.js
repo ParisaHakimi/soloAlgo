@@ -68,11 +68,13 @@ const people = [
 
 // Array.prototype.map() it returns the same amount of items as we give it.
 // 2. Give us an array of the inventors first and last names
-const firstLast = inventors.map((inventor) => `${inventor.first} ${inventor.last}`);
-console.table(firstLast);
+// const firstLast = inventors.map((inventor) => `${inventor.first} ${inventor.last}`);
+// console.table(firstLast);
+
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
-
+const sortBirth=inventors.sort((a,b)=>(a.year>b.year) ?  1 :  -1)
+console.table(sortBirth)
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live all together?
 
