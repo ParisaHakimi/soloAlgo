@@ -115,13 +115,30 @@
 //   factorialize(5);
 
 // Find the Longest Word in a String
-function findLongestWordLength(str) {
-    let max=0;
-    for(let word of str.split(' ')){
-  if(word.length>max){
-    max=word.length
+// function findLongestWordLength(str) {
+//     let max=0;
+//     for(let word of str.split(' ')){
+//   if(word.length>max){
+//     max=word.length
+//   }
+  
+//     }
+//    return max
+//   }
+
+// Return Largest Numbers in Arrays
+function largestOfFour(arr) {
+    let result=[]
+   
+    for(let i=0;i<arr.length;i++){
+       let max=arr[i][0]
+      for(let j=1;j<arr[i].length;j++){
+        if(arr[i][j]>max){
+          max=arr[i][j]
+        }
+      }
+      result.push(max)
+    }
+   return result
   }
   
-    }
-   return max
-  }
