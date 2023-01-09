@@ -127,18 +127,23 @@
 //   }
 
 // Return Largest Numbers in Arrays
-function largestOfFour(arr) {
-    let result=[]
+// function largestOfFour(arr) {
+//     let result=[]
    
-    for(let i=0;i<arr.length;i++){
-       let max=arr[i][0]
-      for(let j=1;j<arr[i].length;j++){
-        if(arr[i][j]>max){
-          max=arr[i][j]
-        }
-      }
-      result.push(max)
-    }
-   return result
-  }
+//     for(let i=0;i<arr.length;i++){
+//        let max=arr[i][0]
+//       for(let j=1;j<arr[i].length;j++){
+//         if(arr[i][j]>max){
+//           max=arr[i][j]
+//         }
+//       }
+//       result.push(max)
+//     }
+//    return result
+//   }
+
+// Confirm the Ending
+function confirmEnding(str, target) {
+    return str.slice(str.length-target.length)===target  
+   }
   
