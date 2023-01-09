@@ -104,12 +104,24 @@
 //   reverseString("hello");
 
 // factorialize
-function factorialize(num) {
-    if(num<=1){
-      return 1
-    }
-    let fact=num*factorialize(num-1)
-    return fact;
+// function factorialize(num) {
+//     if(num<=1){
+//       return 1
+//     }
+//     let fact=num*factorialize(num-1)
+//     return fact;
+//   }
+//   console.log(factorialize(5))
+//   factorialize(5);
+
+// Find the Longest Word in a String
+function findLongestWordLength(str) {
+    let max=0;
+    for(let word of str.split(' ')){
+  if(word.length>max){
+    max=word.length
   }
-  console.log(factorialize(5))
-  factorialize(5);
+  
+    }
+   return max
+  }
