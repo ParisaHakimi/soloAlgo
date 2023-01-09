@@ -57,59 +57,59 @@
 //   "Biondo, Frank",
 // ];
 
-// // Array.prototype.filter()
-// // 1. Filter the list of inventors for those who were born in the 1500's
-// // const inventorsBorn1500 = inventors.filter((inventor) => {
-// //   if (inventor.year >= 1500 && inventor.year < 1600) {
-// //     return true; //keep it
-// //   }
-// // });
-// // console.table(inventorsBorn1500)
+// Array.prototype.filter()
+// 1. Filter the list of inventors for those who were born in the 1500's
+// const inventorsBorn1500 = inventors.filter((inventor) => {
+//   if (inventor.year >= 1500 && inventor.year < 1600) {
+//     return true; //keep it
+//   }
+// });
+// console.table(inventorsBorn1500)
 
-// // Array.prototype.map() it returns the same amount of items as we give it.
-// // 2. Give us an array of the inventors first and last names
-// // const firstLast = inventors.map((inventor) => `${inventor.first} ${inventor.last}`);
-// // console.table(firstLast);
+// Array.prototype.map() it returns the same amount of items as we give it.
+// 2. Give us an array of the inventors first and last names
+// const firstLast = inventors.map((inventor) => `${inventor.first} ${inventor.last}`);
+// console.table(firstLast);
 
-// // Array.prototype.sort()
-// // 3. Sort the inventors by birthdate, oldest to youngest
-// // const sortBirth=inventors.sort((a,b)=>(a.year>b.year) ?  1 :  -1)
-// // console.table(sortBirth)
+// Array.prototype.sort()
+// 3. Sort the inventors by birthdate, oldest to youngest
+// const sortBirth=inventors.sort((a,b)=>(a.year>b.year) ?  1 :  -1)
+// console.table(sortBirth)
 
-// // Array.prototype.reduce()
-// // 4. How many years did all the inventors live all together?
-// // const totalLive= inventors.reduce((total,inventor)=>{
-// // return total+ (inventor.passed-inventor.year)
-// // },0)
-// // console.log(totalLive)
+// Array.prototype.reduce()
+// 4. How many years did all the inventors live all together?
+// const totalLive= inventors.reduce((total,inventor)=>{
+// return total+ (inventor.passed-inventor.year)
+// },0)
+// console.log(totalLive)
 
-// // 5. Sort the inventors by years lived
-// // const sInventorAge=inventors.sort((a,b)=>{
-// // const firstGuy=a.passed-a.year
-// // const nextGuy=b.passed-b.year
-// // return firstGuy>nextGuy ? -1 :1
-// // })
-// // console.log(sInventorAge)
+// 5. Sort the inventors by years lived
+// const sInventorAge=inventors.sort((a,b)=>{
+// const firstGuy=a.passed-a.year
+// const nextGuy=b.passed-b.year
+// return firstGuy>nextGuy ? -1 :1
+// })
+// console.log(sInventorAge)
 
-// // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
-// // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-// // const category=document.querySelector('.mw-category')
-// // const links=Array.from(category.querySelectorAll('a'))
-// // const de=links
-// //         .map(link=>link.textContent)
-// //         .filter(link=>link.includes("de"))
+// 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+// https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+// const category=document.querySelector('.mw-category')
+// const links=Array.from(category.querySelectorAll('a'))
+// const de=links
+//         .map(link=>link.textContent)
+//         .filter(link=>link.includes("de"))
 
-// // 7. sort Exercise
-// // Sort the people alphabetically by last name
-// // const sPeople = people.sort((firstPerson, nextPerson) => {
-// //   const [nameFirstPerson, lastFirstPerson] = firstPerson.split(", ");
-// //   const [nameNextPerson, lastNextPerson] = nextPerson.split(", ");
-// //   return lastFirstPerson > lastNextPerson ? 1 : -1;
-// // });
-// // console.table(sPeople)
+// 7. sort Exercise
+// Sort the people alphabetically by last name
+// const sPeople = people.sort((firstPerson, nextPerson) => {
+//   const [nameFirstPerson, lastFirstPerson] = firstPerson.split(", ");
+//   const [nameNextPerson, lastNextPerson] = nextPerson.split(", ");
+//   return lastFirstPerson > lastNextPerson ? 1 : -1;
+// });
+// console.table(sPeople)
 
-// // 8. Reduce Exercise
-// // Sum up the instances of each of these
+// 8. Reduce Exercise
+// Sum up the instances of each of these
 // const data = [
 //   "car",
 //   "car",
@@ -135,3 +135,40 @@
 //     return obj
 // },{})
 // console.log(trans)
+
+const people = [
+  { name: 'Wes', year: 1988 },
+  { name: 'Kait', year: 1986 },
+  { name: 'Irv', year: 1970 },
+  { name: 'Lux', year: 2015 }
+];
+
+const comments = [
+  { text: 'Love this!', id: 523423 },
+  { text: 'Super good', id: 823423 },
+  { text: 'You are the best', id: 2039842 },
+  { text: 'Ramen is my fav food ever', id: 123523 },
+  { text: 'Nice Nice Nice!', id: 542328 }
+];
+
+   // Some and Every Checks
+    // Array.prototype.some() // is at least one person 19 or older?
+    const newSome=people.some(person=>
+      {const currentYear=(new Date()).getFullYear()
+      return currentYear-person.year >=19
+      }
+      )
+     console.log(newSome)
+    // Array.prototype.every() // is everyone 19 or older?
+    const newEvery=people.every(person=>{
+      const currentYear=(new Date()).getFullYear
+      return currentYear-person.year >=19
+    })
+console.log("newEvery: ",newEvery)
+    // Array.prototype.find()
+    // Find is like filter, but instead returns just the one you are looking for
+    // find the comment with the ID of 823423
+
+    // Array.prototype.findIndex()
+    // Find the comment with this ID
+    // delete the comment with the ID of 823423
