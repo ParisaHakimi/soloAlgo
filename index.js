@@ -93,12 +93,23 @@
 //   convertCtoF(30);
 
 // reverse a string
-function reverseString(str) {
-    let reversed=""
-    for(let char of str){
-  reversed=char+reversed
-    }
-    return reversed;
-  }
+// function reverseString(str) {
+//     let reversed=""
+//     for(let char of str){
+//   reversed=char+reversed
+//     }
+//     return reversed;
+//   }
   
-  reverseString("hello");
+//   reverseString("hello");
+
+// factorialize
+function factorialize(num) {
+    if(num<=1){
+      return 1
+    }
+    let fact=num*factorialize(num-1)
+    return fact;
+  }
+  console.log(factorialize(5))
+  factorialize(5);
