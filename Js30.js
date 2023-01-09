@@ -178,3 +178,7 @@ console.log("newFind: ",newFind)
     // Array.prototype.findIndex()
     // Find the comment with this ID
     // delete the comment with the ID of 823423
+    const newIndex=comments.findIndex(comment=>comment.id===823423)
+    comments.splice(newIndex,1)
+
+    console.log(comments)
