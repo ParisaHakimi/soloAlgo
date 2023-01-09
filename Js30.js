@@ -165,9 +165,15 @@ const comments = [
       return currentYear-person.year >=19
     })
 console.log("newEvery: ",newEvery)
+
+
     // Array.prototype.find()
     // Find is like filter, but instead returns just the one you are looking for
     // find the comment with the ID of 823423
+const newFind=comments.find(comment=>{
+  return comment.id===823423
+})
+console.log("newFind: ",newFind)
 
     // Array.prototype.findIndex()
     // Find the comment with this ID
