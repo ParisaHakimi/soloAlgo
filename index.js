@@ -84,10 +84,21 @@
 // returnOddsArray1To255()
   
 //convert Celsius to Fahrenheit
-function convertCtoF(celsius) {
-    let fahrenheit;
-    fahrenheit= (celsius*9)/5+32
-    return fahrenheit;
+// function convertCtoF(celsius) {
+//     let fahrenheit;
+//     fahrenheit= (celsius*9)/5+32
+//     return fahrenheit;
+//   }
+  
+//   convertCtoF(30);
+
+// reverse a string
+function reverseString(str) {
+    let reversed=""
+    for(let char of str){
+  reversed=char+reversed
+    }
+    return reversed;
   }
   
-  convertCtoF(30);
+  reverseString("hello");
