@@ -143,7 +143,18 @@
 //   }
 
 // Confirm the Ending
-function confirmEnding(str, target) {
-    return str.slice(str.length-target.length)===target  
-   }
+// function confirmEnding(str, target) {
+//     return str.slice(str.length-target.length)===target  
+//    }
   
+// Repeat a String Repeat a String
+function repeatStringNumTimes(str, num) {
+    let newStr=""
+    if(num<0){
+      return "";
+    }
+    for(let i=1;i<=num;i++){
+  newStr+=str
+    }
+    return newStr;
+  }
