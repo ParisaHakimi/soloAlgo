@@ -148,13 +148,18 @@
 //    }
   
 // Repeat a String Repeat a String
-function repeatStringNumTimes(str, num) {
-    let newStr=""
-    if(num<0){
-      return "";
-    }
-    for(let i=1;i<=num;i++){
-  newStr+=str
-    }
-    return newStr;
+// function repeatStringNumTimes(str, num) {
+//     let newStr=""
+//     if(num<0){
+//       return "";
+//     }
+//     for(let i=1;i<=num;i++){
+//   newStr+=str
+//     }
+//     return newStr;
+//   }
+
+//   Truncate a String
+function truncateString(str, num) {
+    return str.length>num ? str.slice(0,num)+"..." : str
   }
